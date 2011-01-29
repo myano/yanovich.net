@@ -1,0 +1,10 @@
+# robots.txt for http://yanovich.net
+
+User-agent: Googlebot-Image
+Disallow: /
+
+# Not valid for all robots; Google follows this convention at least
+User-agent: *
+Disallow: /images/
+Disallow: /.*
+

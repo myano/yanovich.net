@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+/*---------body and font definitions and other styles--------*/
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+
+html {
+padding:0px;
+margin:0px;
+font-family:Arial,sans-serif;
+}
+
+body {
+background-color: #000000;
+font-family: Arial,sans-serif;
+color:#ffffff;
+padding:0px;
+margin:0px;
+font-size:62.5%;
+}
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+/*---------------------------ID's----------------------------*/
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+
+
+#header {
+background-color:#000000;
+color:#ffffff;
+height:75px;
+left:50%;
+margin-top:25px;
+margin-left:-396px;
+position:relative;
+width:800px;
+}
+
+#bgimg {
+/* background-image:url('images/landscape.jpg'); */
+background-image:url('images/green_pasture.jpg');
+background-repeat:repeat-y;
+border:4px solid #ffffff;
+left:50%;
+height:auto;
+margin-top:0px;
+margin-left:-400px;
+position:relative;
+width:800px;
+}
+
+#content {
+background-color:#ffffff;
+border:2px solid #000000;
+color:#000000;
+font-size:1.5em;
+left:50%;
+margin-top:25px;  /* originally 25px */
+margin-left:-350px;
+margin-bottom:25px;
+opacity:0.7;
+padding:3px;
+position:relative;
+top:50%;
+width:700px;
+}
+
+#footer {
+background-color:#000000;
+color:#ffffff;
+height:80px;
+left:50%;
+margin-top:20px;
+margin-left:-396px;
+position:absolute;
+width:800px;
+}
+
+#navigation {
+background-color:#000000;
+height: 55px;
+opacity:0.6;
+padding: 0px 0px 0px 12px;
+width: 788px;
+}
+
+#menu, #menu ul {
+padding: 0;
+margin: 0;
+list-style: none;
+line-height: 1;
+padding-top:7px;
+padding-bottom:12px;
+}
+
+#menu li {
+float: left;
+font-size: 12px;
+font-weight: bold;
+}
+
+#menu a {
+display: block;
+line-height: 38px;
+padding: 0px 17px 0px 17px;
+color: #FFFFFF;
+font-family: Arial, sans-serif;
+font-weight: 100;
+}
+
+#menu a:hover {
+background: url(images/navb1.png) no-repeat top left;
+padding: 0px 7px 0px 17px;
+margin-right: 5px;
+}
+
+#menu a:hover span {
+color: #FFFFFF;
+background: url(images/navb2.png) no-repeat bottom right;
+padding: 12px 5px 12px 0px;
+position: relative;
+left: 12px;
+}
+
+a#tooCool {
+position: fixed;
+right: 0;
+bottom: 0;
+display: block;
+height: 80px;
+width: 80px;
+background: url("images/too_cool.png") bottom right no-repeat;
+text-indent: -999em;
+text-decoration: none;
+}
+
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+/*--------------------------CLASSES--------------------------*/
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+.alignright { float:right; }
+.alignleft { float:left; }
+.fontbold { font-weight:bold; }
+.textalign-center { text-align:center; }
+.f60e { font-size:6em; }
+.f50e { font-size:5em; }
+.f40e { font-size:4em; }
+.f30e { font-size:3em; }
+.f27e { font-size:2.7em; }
+.f25e { font-size:2.5em; }
+.f22e { font-size:2.2em; }
+.f20e { font-size:2em; }
+.f18e { font-size:1.8em; }
+.f15e { font-size:1.5em; }
+.f12e { font-size:1.2em; }
+.f10e { font-size:1.0em; }
+.fontblue { color:#00f; }
+.fontred { color:#f00; }
+.fontgreen { color:#0f0 }
+.noborder { border-style:none; }
