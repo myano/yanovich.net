@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <a id="tooCool" href="http://www.w3junkies.com/toocool/">Too Cool for Internet Explorer</a>
+        <!-- <a id="tooCool" href="http://www.w3junkies.com/toocool/">Too Cool for Internet Explorer</a> -->
         <div id="header">
             <!--
                 This contains the sweet "logo."
