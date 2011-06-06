@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head profile="http://www.w3.org/2005/10/profile">
         <link href="style.css" rel="stylesheet" type="text/css" />
 
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
