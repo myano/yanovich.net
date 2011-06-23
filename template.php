@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head profile="http://www.w3.org/2005/10/profile">
+        <META NAME=”ROBOTS” CONTENT="NOARCHIVE" />
         <link href="style.css" rel="stylesheet" type="text/css" />
 
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
