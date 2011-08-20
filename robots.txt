@@ -10,6 +10,9 @@ Disallow: /
 User-agent: *
 Disallow: /images/
 Disallow: /.*
-Disallow: /osuosc/*
-Disallow: /osuosc/
-
+Disallow: /logs/*
+Disallow: /logs/
+Disallow: /.osurb/
+Disallow: /.stuff/
+Disallow: /.dl/
+Disallow: /.git/
