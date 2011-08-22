@@ -11,6 +11,7 @@ DEFAULT_PAGINATION = 2
 OUTPUT_PATH = '/home/yano/yanovich.net/public/blog/'
 RELATIVE_URLS = True
 GOOGLE_ANALYTICS = "UA-21129437-1"
+TIMEZONE = "UTC"
 
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
