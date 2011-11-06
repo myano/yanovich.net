@@ -21,5 +21,5 @@ THEME = "notmyidea"
 
 STATIC_PATHS = ["images",]
 
-LINKS = [ ("xkcd", "http://xkcd.com"), ("EFF", "https://www.eff.org/"),\
+LINKS = [ ("xkcd", "http://xkcd.com"), ("EFF", "https://www.eff.org/"),
     ("Slashdot", "http://slashdot.org")]

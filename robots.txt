@@ -6,13 +6,14 @@ Disallow: /
 User-agent: ia_archiver
 Disallow: /
 
-# Not valid for all robots; Google follows this convention at least
 User-agent: *
 Disallow: /images/
-Disallow: /.*
 Disallow: /logs/*
 Disallow: /logs/
 Disallow: /.osurb/
 Disallow: /.stuff/
 Disallow: /.dl/
 Disallow: /.git/
+Disallow: /blog_src/
+# Doesn't work for all robots
+Disallow: /.*
