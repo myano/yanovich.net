@@ -62,6 +62,8 @@
         ?>
         </div>
 
+        <script type="text/javascript" src="http://americancensorship.org/js"></script>
+
         <script type="text/javascript">
 
             var _gaq = _gaq || [];
