@@ -13,7 +13,6 @@ Disallow: /logs/
 Disallow: /.osurb/
 Disallow: /.public/
 Disallow: /.stuff/
-Disallow: /.dl/
 Disallow: /.git/
 Disallow: /blog_src/
 # Doesn't work for all robots
