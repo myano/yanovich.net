@@ -49,7 +49,6 @@ def log(fn):
     print 'Content-Type: text/html; charset=utf-8'
     print 
     print '<!DOCTYPE html>'
-    print '<head>'
     print '<title>#osu_osc %s %s %s</title>' % (day, month, year)
     print '<meta charset="utf-8">'
     print '<meta name="robots" content="noindex">'
@@ -72,44 +71,39 @@ h1 { font-size: 24px }
 .b a:hover { background: #ffc }
 </style>
 '''
-    print '</head>'
-    print '<body>'
+    print 
     print '<h1>#osu_osc %s %s %s</h1>' % (day, month, year)
 
     f = open(fn + '.txt')
     for line in f: 
         line = line.rstrip('\n')
-        try:
-            t, content = line.split(' ', 1)
-            if content.startswith('***') and ('quit' in content): 
-                cls, (a, b) = 'quit', content[4:].split(' ', 1)
-                # '***', content[4:]
-            elif content.startswith('***') and ('part' in content): 
-                cls, (a, b) = 'part', content[4:].split(' ', 1)
-                # '***', content[4:]
-            elif content.startswith('***') and ('join' in content): 
-                cls, (a, b) = 'join', content[4:].split(' ', 1)
-                # '***', content[4:]
-            elif content.startswith('***'): 
-                cls, a, b = 'event', '***', content[4:]
-            elif content.startswith('*'): 
-                cls, (a, b) = 'action', content[2:].split(' ', 1)
-                a = '* ' + a
-            elif content.startswith('<'): 
-                cls, (a, b) = 'message', content.split(' ', 1)
-            else: cls, a, b = 'unknown', '?', content
+        t, content = line.split(' ', 1)
+        if content.startswith('***') and ('quit' in content): 
+            cls, (a, b) = 'quit', content[4:].split(' ', 1)
+            # '***', content[4:]
+        elif content.startswith('***') and ('part' in content): 
+            cls, (a, b) = 'part', content[4:].split(' ', 1)
+            # '***', content[4:]
+        elif content.startswith('***') and ('join' in content): 
+            cls, (a, b) = 'join', content[4:].split(' ', 1)
+            # '***', content[4:]
+        elif content.startswith('***'): 
+            cls, a, b = 'event', '***', content[4:]
+        elif content.startswith('*'): 
+            cls, (a, b) = 'action', content[2:].split(' ', 1)
+            a = '* ' + a
+        elif content.startswith('<'): 
+            cls, (a, b) = 'message', content.split(' ', 1)
+        else: cls, a, b = 'unknown', '?', content
 
-            fragid = 'T' + t.replace(':', '-')
-            output = ['<span class="%s" id="%s">' % (cls, fragid)]
-            stamp = '<a href="#%s" title="%s" class="when">%s</a> '
-            output.append(stamp % (fragid, t, t))
-            output.append('<span class="a">' + encode(a) + '</span> ')
-            output.append('<span class="b">' + encode(b) + '</span>')
-            output.append('</span><br>')
-            print ''.join(output)
-        except:
-            pass
-    print '\n</body></html>'
+        fragid = 'T' + t.replace(':', '-')
+        output = ['<span class="%s" id="%s">' % (cls, fragid)]
+        stamp = '<a href="#%s" title="%s" class="when">%s</a> '
+        output.append(stamp % (fragid, t, t))
+        output.append('<span class="a">' + encode(a) + '</span> ')
+        output.append('<span class="b">' + encode(b) + '</span>')
+        output.append('</span><br>')
+        print ''.join(output)
 
 def formatnumber(n): 
     parts = list(str(n))
@@ -123,8 +117,7 @@ def homepage():
     print """\
 <!DOCTYPE html>
 <title>#osu_osc Logs</title>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
+<head>
 <style>
 @import "http://fonts.googleapis.com/css?family=Lato"; 
 body { font: 1.5em/1.5em Lato, sans-serif; margin: 3em 5em }
@@ -143,16 +136,17 @@ $(function () {
     var d = new Date(); 
     var year = d.getFullYear(); 
     var month = d.getMonth() + 1; 
-    var day = d.getDate();
+    var day = d.getDate(); 
     month = month < 10 ? '0' + month : month; 
     day = day < 10 ? '0' + day : day; 
     $('a.today').attr('href', year + '-' + month + '-' + day); 
-});
+}); 
 </script> 
- 
+</head>
+<body>
 <h1>#osu_osc Logs</h1>
  
-<p class="nav"><a href="http://opensource.osu.edu/">Home</a> &middot; 
+<p class="nav"><a href="/">Home</a> &middot; 
 <a href="today" class="today">Today</a>
 
 <table>
@@ -173,7 +167,7 @@ $(function () {
         # print '</li>'
     print """</table>
       <address>
-          <a href="http://opensource.osu.edu/">opensource.osu.edu</a>
+          <a href="https://opensource.osu.edu">opensource.osu.edu</a>
       </address>
       </body>
       </html>
@@ -186,3 +180,4 @@ def main():
 
 if __name__=="__main__": 
     main()
+
