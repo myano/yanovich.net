@@ -50,6 +50,7 @@ def log(fn):
     print 
     print '<!DOCTYPE html>'
     print '<title>#osu_osc %s %s %s</title>' % (day, month, year)
+    print '<head>'
     print '<meta charset="utf-8">'
     print '<meta name="robots" content="noindex">'
     # print '<link rel="stylesheet" href="logs2.css">'
@@ -70,7 +71,9 @@ h1 { font-size: 24px }
 .b a { color: #000; text-decoration: underline }
 .b a:hover { background: #ffc }
 </style>
+</head>
 '''
+    print '<body>'
     print 
     print '<h1>#osu_osc %s %s %s</h1>' % (day, month, year)
 
@@ -104,6 +107,7 @@ h1 { font-size: 24px }
         output.append('<span class="b">' + encode(b) + '</span>')
         output.append('</span><br>')
         print ''.join(output)
+    print '</body></html>'
 
 def formatnumber(n): 
     parts = list(str(n))
@@ -118,6 +122,8 @@ def homepage():
 <!DOCTYPE html>
 <title>#osu_osc Logs</title>
 <head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
 <style>
 @import "http://fonts.googleapis.com/css?family=Lato"; 
 body { font: 1.5em/1.5em Lato, sans-serif; margin: 3em 5em }
@@ -136,7 +142,7 @@ $(function () {
     var d = new Date(); 
     var year = d.getFullYear(); 
     var month = d.getMonth() + 1; 
-    var day = d.getDate(); 
+    var day = d.getDate();
     month = month < 10 ? '0' + month : month; 
     day = day < 10 ? '0' + day : day; 
     $('a.today').attr('href', year + '-' + month + '-' + day); 
