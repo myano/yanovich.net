@@ -116,7 +116,7 @@ class Loggy(Bot):
 
                 if request in ('pointer', 'bookmark', 'uri'):
                     day = self.now('%Y-%m-%d')
-                    uri = self.loguri + day + '.txt#T' + timestamp.replace(':', '-')
+                    uri = self.loguri + day + '#T' + timestamp.replace(':', '-')
                     self.msg(origin.sender, uri)
 
                 elif request in ('ping', 'boing'):
