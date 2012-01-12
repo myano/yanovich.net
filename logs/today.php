@@ -19,6 +19,7 @@ rsort($filearray);
 $latest = $filearray[0];
 
 $latest_title = substr_replace($latest, '', -4, 4);
+
 echo "<!DOCTYPE html>
 <html>
     <head>
