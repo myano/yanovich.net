@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf8 -*-
 
 import cgitb
 cgitb.enable()
@@ -14,16 +15,58 @@ def utf8ize(s):
             except: nuggets.append(unicode(nugget))
     return ' '.join([n.encode('utf-8') for n in nuggets])
 
-def encode(text): 
+r_colour = re.compile(r'\x03(\d\d)(.*?)\x03')
+r_colour2 = re.compile(r'\x19F(\d\d)(.*?)\x1c')
+
+def get_colour(matchobj):
+    tempstr = matchobj.group(0)
+    base = '<span style="color: %s;">%s</span>'
+    result = r_colour.findall(tempstr)
+    result = result[0]
+    if result[0] in colours:
+        return base % (colours[result[0]], result[1])
+
+def get_colour2(matchobj):
+    tempstr = matchobj.group(0)
+    base = '<span style="color: %s;">%s</span>'
+    result = r_colour2.findall(tempstr)
+    result = result[0]
+    if result[0] in colours:
+        return base % (colours[result[0]], result[1])
+
+def encode(text):
     text = utf8ize(text)
     text = text.replace('&', '&amp;')
     text = text.replace('<', '&lt;')
     text = text.replace('  ', '&nbsp;&nbsp;')
+    text = text.decode('utf-8')
+    text = r_colour.sub(get_colour, text)
+    text = r_colour2.sub(get_colour2, text)
+    text = text.encode('utf-8')
     return r_uri.sub(r'<a href="\1">\1</a>', text)
 
 r_uri = re.compile(
     r'((ftp|https?)://([^\s<>"\'\[\]),;:.&]|&(?![gl]t;)|[\[\]),;:.](?! ))+)'
 )
+
+colours = {
+        '00' : 'white',
+        '01' : 'black',
+        '02' : 'navy',
+        '03' : 'green',
+        '04' : 'red',
+        '05' : 'maroon',
+        '06' : 'purple',
+        '07' : 'olive',
+        '08' : 'yellow',
+        '09' : 'lime',
+        '10' : 'teal',
+        '11' : 'aqua',
+        '12' : 'blue',
+        '13' : 'fuchsia',
+        '14' : 'gray',
+        '15' : 'silver',
+        }
 
 def log(fn): 
     year = fn[0:4]
@@ -186,4 +229,3 @@ def main():
 
 if __name__=="__main__": 
     main()
-
