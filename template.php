@@ -7,6 +7,7 @@
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <meta name="keywords" content=" <?php echo $meta; ?> ">
         <title> <?php echo $page_title; ?> </title>
+        <script type="text/javascript" src="//js.sopablackout.org/sopablackout.js"></script>
     </head>
 
     <body>
