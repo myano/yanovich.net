@@ -16,7 +16,7 @@ def utf8ize(s):
     return ' '.join([n.encode('utf-8') for n in nuggets])
 
 r_colour = re.compile(r'\x03(\d\d)(.*?)\x03')
-r_colour2 = re.compile(r'\x19F(\d\d)(.*?)\x1c')
+r_bold = re.compile(r'\x02(.*?)\x02')
 
 def get_colour(matchobj):
     tempstr = matchobj.group(0)
@@ -26,13 +26,12 @@ def get_colour(matchobj):
     if result[0] in colours:
         return base % (colours[result[0]], result[1])
 
-def get_colour2(matchobj):
+def get_bold(matchobj):
     tempstr = matchobj.group(0)
-    base = '<span style="color: %s;">%s</span>'
-    result = r_colour2.findall(tempstr)
-    result = result[0]
-    if result[0] in colours:
-        return base % (colours[result[0]], result[1])
+    base = '<span style="font-weight: bold;">%s</span>'
+    result = r_bold.findall(tempstr)
+    if result:
+        return base % (result[0])
 
 def encode(text):
     text = utf8ize(text)
@@ -41,7 +40,7 @@ def encode(text):
     text = text.replace('  ', '&nbsp;&nbsp;')
     text = text.decode('utf-8')
     text = r_colour.sub(get_colour, text)
-    text = r_colour2.sub(get_colour2, text)
+    text = r_bold.sub(get_bold, text)
     text = text.encode('utf-8')
     return r_uri.sub(r'<a href="\1">\1</a>', text)
 
