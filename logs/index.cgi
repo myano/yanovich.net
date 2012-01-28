@@ -167,7 +167,7 @@ def homepage():
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <style>
-@import "http://fonts.googleapis.com/css?family=Lato"; 
+@import lato;
 body { font: 1.5em/1.5em Lato, sans-serif; margin: 3em 5em }
 a { text-decoration: none }
 a:hover { text-decoration: underline }
