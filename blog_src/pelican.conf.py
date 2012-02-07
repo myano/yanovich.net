@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 AUTHOR = u'Michael Yanovich'
 SITENAME = u"Yano's Blog"
-SITEURL = u"http://yanovich.net"
+SITEURL = u"https://yanovich.net"
 
 GITHUB_URL = u"https://github.com/myano/"
 DISQUS_SITENAME = u"yanosblog"
