@@ -7,7 +7,7 @@ Installing the OTR (Off The Record) plugin for Finch
 
 I've been using Finch on a server to stay connected to chat. Until recently I haven't had a need to communicate with anyone using pidgin's infamous OTR plugin. At first I thought I could simply install 'pidgin-otr' from Debian's repositories and finch would automatically get the ability to use it. I quickly realized this was not the case. I went searching the web and found a few files and bits and pieces of instructions on how to get this installed. Here is how I got it working:
 
-I've done this on Debian 6.0 (stable) and Ubuntu 10.04. Also **aptitude** and **apt-get** and practically the same thing on Ubuntu and Debian, use which ever one makes you more comfortable.
+I've done this on Debian 6.0 (stable) and Ubuntu 10.04. Also **aptitude** and **apt-get** are practically the same thing on Ubuntu and Debian, use which ever one makes you more comfortable.
 
 First I downloaded the source of the latest version of these libraries and software:
 
