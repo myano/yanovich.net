@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <link href="style.css" rel="stylesheet" type="text/css" />
 
+        <meta name="ROBOTS" content="NOARCHIVE"/>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <meta name="keywords" content=" <?php echo $meta; ?> ">
         <title> <?php echo $page_title; ?> </title>

@@ -4,3 +4,5 @@ RewriteBase /
 RewriteRule ^logs/\d\d\d\d\-\d\d-\d\d.*$ logs/index.cgi [L]
 RewriteRule ^.osurb/\d\d\d\d\-\d\d-\d\d.*$ .osurb/index.cgi [L]
 RewriteRule ^logs/today$ logs/today.php [L]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://yanovich.net%{REQUEST_URI}
