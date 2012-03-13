@@ -16,6 +16,6 @@ My site, yanovich.net, is using an SSL certificate issued by Comodo. If you conn
 <br /><br />
 SSL Certificate Fingerprints:
 <ul>
-    <li><em>SHA-256:</em> B1 E0 F3 2F 74 A9 74 17 6A F9 6D 45 BD D2 E9 96 DA DB AF E9 F5 07 51 BC 07 AC CB 15 68 06 1A 4B</li>
-    <li><em>SHA-1:</em> 3A 8D 1D 6D A1 7C 39 A0 53 24 F0 A0 E3 E9 CB 07 BF 7B 60 E1</li>
+    <li><em>SHA-256:</em> 19 F5 9D 1D C5 CC D4 3B E9 CA 8E F6 81 FC 0E ED 8F 18 03 38 7F 16 D9 87 E9 CC 1D 7A 5C 9C F7 37</li>
+    <li><em>SHA-1:</em> 34 B4 3D F1 D3 63 53 31 7D ED 71 E7 5A A8 4A 88 07 42 C4 03</li>
 </ul>

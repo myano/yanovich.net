@@ -9,6 +9,11 @@ Cf. http://paste.lisp.org/display/28974
 import sys, re
 import socket, asyncore, asynchat
 
+f = open("/home/yano/password.txt", "r")
+PASSWORD = f.readline()
+PASSWORD = PASSWORD.replace('\n', '')
+f.close()
+
 class Origin(object):
     source = re.compile(r'([^!]*)!?([^@]*)@?(.*)')
 
@@ -54,8 +59,11 @@ class Bot(asynchat.async_chat):
     def handle_connect(self):
         if self.verbose:
             print >> sys.stderr, "connected!"
+            pass
         self.write(('NICK', self.nick))
         self.write(('USER', self.user, '+iw', self.nick), self.name)
+        self.write(('MODE', self.nick, '-i', self.nick))
+        self.push('PRIVMSG NickServ :IDENTIFY %s\r\n' % (PASSWORD))
 
     def collect_incoming_data(self, data):
         self.buffer.append(data)
