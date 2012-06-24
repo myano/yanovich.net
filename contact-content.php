@@ -18,4 +18,5 @@ SSL Certificate Fingerprints:
 <ul>
     <li><em>SHA-256:</em> 19 F5 9D 1D C5 CC D4 3B E9 CA 8E F6 81 FC 0E ED 8F 18 03 38 7F 16 D9 87 E9 CC 1D 7A 5C 9C F7 37</li>
     <li><em>SHA-1:</em> 34 B4 3D F1 D3 63 53 31 7D ED 71 E7 5A A8 4A 88 07 42 C4 03</li>
+    <li><em>MD5:</em> 81 F7 3D FC 66 29 06 19 C0 E4 C5 8B AB 51 B8 50</li>
 </ul>

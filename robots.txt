@@ -1,4 +1,4 @@
-# robots.txt for http://yanovich.net
+# robots.txt for https://yanovich.net
 
 User-agent: Googlebot-Image
 Disallow: /
@@ -15,5 +15,7 @@ Disallow: /.public/
 Disallow: /.stuff/
 Disallow: /.git/
 Disallow: /blog_src/
+Disallow: /.ham/
+Disallow: /.ham/*
 # Doesn't work for all robots
 Disallow: /.*

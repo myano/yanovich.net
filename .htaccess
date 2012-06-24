@@ -7,5 +7,17 @@ RewriteRule ^.osurb/\d\d\d\d\-\d\d-\d\d .osurb/index.cgi [L]
 RewriteRule ^logs/today$ logs/today.php [L]
 RewriteRule ^pure-lang/today$ pure-lang/today.php [L]
 RewriteRule ^ip.* http://yano.nu/ip/ [R=301,L]
+
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://yanovich.net/$1 [R=301,L]
+
+# disable the server signature
+ServerSignature Off
+
+# preserve bandwidth for PHP enabled servers
+<ifmodule mod_php4.c>
+    php_value zlib.output_compression 16386
+</ifmodule>
+
+# set the default character set
+AddDefaultCharset UTF-8
