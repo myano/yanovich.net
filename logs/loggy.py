@@ -8,10 +8,15 @@ Cf. http://paste.lisp.org/display/28974
 
 import sys, re
 import socket, asyncore, asynchat
+import os
+import time
+
+os.environ['TZ'] = "America/New_York"
+time.tzset()
 
 f = open("/home/yano/password.txt", "r")
 PASSWORD = f.readline()
-PASSWORD = PASSWORD.replace('\n', '')
+PASSWORD = PASSWORD.replace('\n', '').rstrip().lstrip()
 f.close()
 
 class Origin(object):
