@@ -1,8 +1,8 @@
 <div class="textalign-center">
-                <iframe style="border: 0; margin: 0; padding: 0;" src="https://www.gittip.com/myano/widget.html" width="48pt" height="20pt"></iframe>
-                <a href="https://flattr.com/thing/801771/Michael-Yanovichs" target="_blank"><img src="images/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TTKTH8L4THKB6" target="_blank">
-                    <img src="images/btn_donate_SM.gif" alt="Donate via Paypal" title="Donate via Paypal" border="0" />
+                <iframe style="border: 0; margin: 0; padding: 0;" src="https://www.gittip.com/myano/widget.html" width="48" height="20"></iframe>
+                <a href="https://flattr.com/thing/801771/Michael-Yanovichs" target="_blank"><img src="images/flattr-badge-large.png" alt="Flattr this" title="Flattr this" style="border: 0;" /></a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=TTKTH8L4THKB6" target="_blank">
+                    <img src="images/btn_donate_SM.gif" alt="Donate via Paypal" title="Donate via Paypal" style="border:0;" />
                 </a>
                 <br />
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
