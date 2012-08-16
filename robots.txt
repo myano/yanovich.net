@@ -8,13 +8,19 @@ Disallow: /
 
 User-agent: *
 Disallow: /images/
-Disallow: /logs/*
+Disallow: /images/*
 Disallow: /logs/
+Disallow: /logs/*
 Disallow: /.osurb/
+Disallow: /.osurb/*
 Disallow: /.public/
+Disallow: /.public/*
 Disallow: /.stuff/
+Disallow: /.stuff/*
 Disallow: /.git/
+Disallow: /.git/*
 Disallow: /blog_src/
+Disallow: /blog_src/*
 Disallow: /.ham/
 Disallow: /.ham/*
 # Doesn't work for all robots
