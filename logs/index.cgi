@@ -4,13 +4,15 @@
 import cgitb
 cgitb.enable()
 
-import sys, os, re, glob, datetime
+import cgi, sys, os, re, glob, datetime
 
-def utf8ize(s): 
+import pygeoip
+
+def utf8ize(s):
     nuggets = []
-    for nugget in s.split(' '): 
+    for nugget in s.split(' '):
         try: nuggets.append(unicode(nugget, 'utf-8'))
-        except: 
+        except:
             try: nuggets.append(unicode(nugget, 'iso-8859-1'))
             except: nuggets.append(unicode(nugget))
     return ' '.join([n.encode('utf-8') for n in nuggets])
@@ -67,34 +69,41 @@ colours = {
         '15' : 'silver',
         }
 
-def log(fn): 
+def log(fn):
     year = fn[0:4]
     month = fn[5:7]
     day = fn[8:10]
 
     month = {
-        '01': 'January', 
-        '02': 'February', 
-        '03': 'March', 
-        '04': 'April', 
-        '05': 'May', 
-        '06': 'June', 
-        '07': 'July', 
-        '08': 'August', 
-        '09': 'September', 
-        '10': 'October', 
-        '11': 'November', 
+        '01': 'January',
+        '02': 'February',
+        '03': 'March',
+        '04': 'April',
+        '05': 'May',
+        '06': 'June',
+        '07': 'July',
+        '08': 'August',
+        '09': 'September',
+        '10': 'October',
+        '11': 'November',
         '12': 'December'
     }.get(month, '?')
     day = day.lstrip('0')
 
     print 'Content-Type: text/html; charset=utf-8'
-    print 
+    print
     print '<!DOCTYPE html>'
     print '<head>'
     print '<title>#osuosc %s %s %s</title>' % (day, month, year)
     print '<meta charset="utf-8">'
-    print '<meta name="robots" content="noindex">'
+    print '<meta name="robots" content="noindex" />'
+    print '<meta name="robots" content="noarchive" />'
+    print '<meta name="robots" content="nofollow" />'
+    print '<meta name="googlebot" content="nosnippet" />'
+    print '<meta name="robots" content="noodp" />'
+    print '<meta http-equiv="pragma" content="no-cache">'
+    print '<meta http-equiv="Expires" content="-1" />'
+    print '<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />'
     # print '<link rel="stylesheet" href="logs2.css">'
     print '''\
 <style>
@@ -116,28 +125,28 @@ h1 { font-size: 24px }
 </head>
 '''
     print '<body>'
-    print 
+    print
     print '<h1>#osuosc %s %s %s</h1>' % (day, month, year)
 
     f = open(fn + '.txt')
-    for line in f: 
+    for line in f:
         line = line.rstrip('\n')
         t, content = line.split(' ', 1)
-        if content.startswith('***') and ('quit' in content): 
+        if content.startswith('***') and ('quit' in content):
             cls, (a, b) = 'quit', content[4:].split(' ', 1)
             # '***', content[4:]
-        elif content.startswith('***') and ('part' in content): 
+        elif content.startswith('***') and ('part' in content):
             cls, (a, b) = 'part', content[4:].split(' ', 1)
             # '***', content[4:]
-        elif content.startswith('***') and ('join' in content): 
+        elif content.startswith('***') and ('join' in content):
             cls, (a, b) = 'join', content[4:].split(' ', 1)
             # '***', content[4:]
-        elif content.startswith('***'): 
+        elif content.startswith('***'):
             cls, a, b = 'event', '***', content[4:]
-        elif content.startswith('*'): 
+        elif content.startswith('*'):
             cls, (a, b) = 'action', content[2:].split(' ', 1)
             a = '* ' + a
-        elif content.startswith('<'): 
+        elif content.startswith('<'):
             cls, (a, b) = 'message', content.split(' ', 1)
         else: cls, a, b = 'unknown', '?', content
 
@@ -151,21 +160,28 @@ h1 { font-size: 24px }
         print ''.join(output)
     print '</body>\n</html>'
 
-def formatnumber(n): 
+def formatnumber(n):
     parts = list(str(n))
     for i in range((len(parts) - 3), 0, -3):
         parts.insert(i, ',')
     return ''.join(parts)
 
-def homepage(): 
+def homepage():
     print "Content-Type: text/html; charset=utf-8"
-    print 
+    print
     print """\
 <!DOCTYPE html>
 <head>
 <title>#osuosc Logs</title>
 <meta charset="utf-8">
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex" />
+<meta name="robots" content="noarchive" />
+<meta name="robots" content="nofollow" />
+<meta name="googlebot" content="nosnippet" />
+<meta name="robots" content="noodp" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
 <style>
 @import lato;
 body { font: 1.5em/1.5em Lato, sans-serif; margin: 3em 5em }
@@ -178,23 +194,23 @@ p.nav { font-size: 1.5em }
 table { margin-left: 1em }
 .size { text-align: right; padding-left: 1em }
 </style>
-<script src="/jquery.js"></script> 
-<script> 
+<script src="/jquery.js"></script>
+<script>
 $(function () {
-    var d = new Date(); 
-    var year = d.getFullYear(); 
-    var month = d.getMonth() + 1; 
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
     var day = d.getDate();
-    month = month < 10 ? '0' + month : month; 
-    day = day < 10 ? '0' + day : day; 
-    $('a.today').attr('href', year + '-' + month + '-' + day); 
-}); 
-</script> 
+    month = month < 10 ? '0' + month : month;
+    day = day < 10 ? '0' + day : day;
+    $('a.today').attr('href', year + '-' + month + '-' + day);
+});
+</script>
 </head>
 <body>
 <h1>#osuosc Logs</h1>
- 
-<p class="nav"><a href="/">Home</a> &middot; 
+
+<p class="nav"><a href="/">Home</a> &middot;
 <a href="today" class="today">Today</a>
 
 <table>
@@ -203,11 +219,11 @@ $(function () {
     filenames.sort()
     filenames.reverse()
     today = datetime.date.today()
-    for fn in filenames: 
+    for fn in filenames:
         date = fn[:-4] # fn sans .txt
         txt = date + '.txt'
         sys.stdout.write('<tr><td><a href="./%s">%s</a>' % (date, date))
-        if os.path.isfile(txt): 
+        if os.path.isfile(txt):
             size = os.stat(txt).st_size
             sys.stdout.write('<td class="size">%s bytes' % formatnumber(size))
             sys.stdout.write('\n')
@@ -221,10 +237,17 @@ $(function () {
       </html>
     """
 
-def main(): 
+def main():
+    GEOIP = pygeoip.Database('GeoIP.dat')
+    IP = cgi.escape(os.environ["REMOTE_ADDR"])
+    if ":" not in IP:
+        answer = GEOIP.lookup(IP)
+        if answer.country != "US":
+            print "No!"
+            return
     fn = os.environ.get('REQUEST_URI', '/').split('/').pop()
     if not fn: homepage()
     else: log(fn)
 
-if __name__=="__main__": 
+if __name__=="__main__":
     main()

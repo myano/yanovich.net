@@ -21,7 +21,5 @@ Disallow: /.git/
 Disallow: /.git/*
 Disallow: /blog_src/
 Disallow: /blog_src/*
-Disallow: /.ham/
-Disallow: /.ham/*
 # Doesn't work for all robots
 Disallow: /.*

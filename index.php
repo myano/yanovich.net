@@ -1,6 +1,6 @@
 <?php
 $page_title = "Michael Yanovich";
 $content = "index-content.php";
-$meta = 'yanovich';
+$meta = "yanovich";
 include("template.php");
 ?> 

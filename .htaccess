@@ -1,6 +1,10 @@
 Options +FollowSymlinks
-RewriteEngine on
+RewriteEngine On
 RewriteBase /
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://yanovich.net/$1 [R=301,L]
+
 RewriteRule ^logs/\d\d\d\d\-\d\d-\d\d$ logs/index.cgi [L]
 RewriteRule ^pure-lang/\d\d\d\d\-\d\d-\d\d$ pure-lang/index.cgi [L]
 RewriteRule ^logs/\d\d\d\d-\d\d-\d\d.*$ logs/ [R=301,L]
@@ -9,9 +13,6 @@ RewriteRule ^.osurb/\d\d\d\d\-\d\d-\d\d .osurb/index.cgi [L]
 RewriteRule ^logs/today$ logs/today.php [L]
 RewriteRule ^pure-lang/today$ pure-lang/today.php [L]
 RewriteRule ^ip.* http://yano.nu/ip/ [R=301,L]
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://yanovich.net/$1 [R=301,L]
 
 # disable the server signature
 ServerSignature Off
@@ -23,3 +24,8 @@ ServerSignature Off
 
 # set the default character set
 AddDefaultCharset UTF-8
+
+ExpiresActive On
+ExpiresDefault A1
+Header append Cache-Control must-revalidate
+
