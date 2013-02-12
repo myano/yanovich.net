@@ -30,9 +30,9 @@
         <div id="bgimg">
         <!--
             This contains the sweet background image!
-            I got the background image from: http://www.flickr.com/photos/39520300@N02/3686845268/
+            I got the background image from: https://secure.flickr.com/photos/39520300@N02/3686845268/
             The background image belongs to: coton00 from flickr.com
-            The original license is: http://creativecommons.org/licenses/by/2.0/deed.en
+            The original license is: https://creativecommons.org/licenses/by/2.0/deed.en
         -->
 
             <div id="navigation">
@@ -49,7 +49,7 @@
                     Content goes here!
                 -->
                 <?php
-                    include($content);
+                    echo $content;
                 ?>
             </div>
 

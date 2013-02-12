@@ -6,3 +6,6 @@ pyohio/*
 blog/*
 .*
 open_source_images.tar.gz
+*.pyc
+cwdg
+cwdg/*

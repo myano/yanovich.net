@@ -12,11 +12,11 @@ PGP Fingerprint:
 </ul>
 
 <span class="fontbold"><em>Site Information:</em></span><br /><br />
-My site, yanovich.net, is using an SSL certificate issued by Comodo. If you connect to my site and you see any other certificate with a different fingerprint than below, the connection <span class="fontbold">has been tampered with.</span>
+My site, yanovich.net, is using an SSL certificate issued by Gandi SAS. If you connect to my site and you see any other certificate with a different fingerprint than below, the connection <span class="fontbold">has been tampered with.</span>
 <br /><br />
 SSL Certificate Fingerprints:
 <ul>
-    <li><em>SHA-256:</em> 19 F5 9D 1D C5 CC D4 3B E9 CA 8E F6 81 FC 0E ED 8F 18 03 38 7F 16 D9 87 E9 CC 1D 7A 5C 9C F7 37</li>
-    <li><em>SHA-1:</em> 34 B4 3D F1 D3 63 53 31 7D ED 71 E7 5A A8 4A 88 07 42 C4 03</li>
-    <li><em>MD5:</em> 81 F7 3D FC 66 29 06 19 C0 E4 C5 8B AB 51 B8 50</li>
+    <li><em>SHA-256:</em> 4E 09 C9 A1 2B 6F B2 62 10 DF 61 8F 9E 05 1A 55 F3 80 64 AB B6 EC 81 CD 18 8F 5E 02 FF FC AD C2</li>
+    <li><em>SHA-1: </em> 81 33 76 7C 4E 67 B6 05 6F 54 70 4D 70 FC 0E A4 78 8B 5A 8F</li>
+    <li><em>MD5: </em> FD 2D D9 B0 2A 31 83 C4 33 07 91 D1 99 1C 51 84<li>
 </ul>

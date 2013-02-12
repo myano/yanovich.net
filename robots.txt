@@ -7,19 +7,14 @@ User-agent: ia_archiver
 Disallow: /
 
 User-agent: *
-Disallow: /images/
-Disallow: /images/*
-Disallow: /logs/
-Disallow: /logs/*
-Disallow: /.osurb/
-Disallow: /.osurb/*
-Disallow: /.public/
-Disallow: /.public/*
-Disallow: /.stuff/
-Disallow: /.stuff/*
-Disallow: /.git/
-Disallow: /.git/*
-Disallow: /blog_src/
-Disallow: /blog_src/*
-# Doesn't work for all robots
+Disallow: /images
+Disallow: /logs
+Disallow: /.osurb
+Disallow: /.public
+Disallow: /.git
+Disallow: /blog_src
+Disallow: /cgi-bin
 Disallow: /.*
+Crawl-delay: 3
+
+Sitemap: https://yanovich.net/sitemap.xml

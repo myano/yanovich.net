@@ -39,6 +39,7 @@ def encode(text):
     text = utf8ize(text)
     text = text.replace('&', '&amp;')
     text = text.replace('<', '&lt;')
+    text = text.replace('>', '&gt;')
     text = text.replace('  ', '&nbsp;&nbsp;')
     text = text.decode('utf-8')
     text = r_colour.sub(get_colour, text)
@@ -51,22 +52,21 @@ r_uri = re.compile(
 )
 
 colours = {
-        '00' : 'white',
-        '01' : 'black',
-        '02' : 'navy',
-        '03' : 'green',
-        '04' : 'red',
-        '05' : 'maroon',
-        '06' : 'purple',
-        '07' : 'olive',
-        '08' : 'yellow',
-        '09' : 'lime',
-        '10' : 'teal',
-        '11' : 'aqua',
-        '12' : 'blue',
-        '13' : 'fuchsia',
-        '14' : 'gray',
-        '15' : 'silver',
+        '01': 'black',
+        '02': 'navy',
+        '03': 'green',
+        '04': 'red',
+        '05': 'maroon',
+        '06': 'purple',
+        '07': 'olive',
+        '08': 'yellow',
+        '09': 'lime',
+        '10': 'teal',
+        '11': 'aqua',
+        '12': 'blue',
+        '13': 'fuchsia',
+        '14': 'gray',
+        '15': 'silver',
         }
 
 def log(fn):
@@ -93,7 +93,7 @@ def log(fn):
     print 'Content-Type: text/html; charset=utf-8'
     print
     print '<!DOCTYPE html>'
-    print '<head>'
+    print ' ' * 4 + '<head>'
     print '<title>#osuosc %s %s %s</title>' % (day, month, year)
     print '<meta charset="utf-8">'
     print '<meta name="robots" content="noindex" />'
@@ -238,15 +238,8 @@ $(function () {
     """
 
 def main():
-    GEOIP = pygeoip.Database('GeoIP.dat')
-    IP = cgi.escape(os.environ["REMOTE_ADDR"])
-    if ":" not in IP:
-        answer = GEOIP.lookup(IP)
-        if answer.country != "US":
-            print "No!"
-            return
     fn = os.environ.get('REQUEST_URI', '/').split('/').pop()
-    if not fn: homepage()
+    if "index.cgi" in fn or not fn: homepage()
     else: log(fn)
 
 if __name__=="__main__":
