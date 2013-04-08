@@ -18,6 +18,10 @@ RewriteRule ^cwdg/\d\d\d\d-\d\d-\d\d.*$ cwdg/ [R=301,L]
 RewriteRule ^cwdg/today$ cwdg/today.php [L]
 
 RewriteRule ^ip.* http://yano.nu/ip/ [R=301,L]
+
+#RewriteRule ^hex/\d\d\d\d\d\d$ /hex/index.cgi [L]
+#RewriteRule ^hex/\d\d\d$ /hex/index.cgi [L]
+
 #RewriteRule templates/.* template [R=301,L]
 
 # disable the server signature
