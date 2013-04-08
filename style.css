@@ -14,7 +14,7 @@ html {
 
 body {
     background-color: #000000;
-    font-family: Arial,sans-serif;
+    font-family: 'Inconsolata', sans-serif;
     color:#ffffff;
     padding:0px;
     margin:0px;
@@ -56,7 +56,7 @@ body {
     background-color:#ffffff;
     border:2px solid #000000;
     color:#000000;
-    font-size:1.5em;
+    font-size: 2.0em;
     left:50%;
     margin-top:25px;  /* originally 25px */
     margin-left:-350px;
@@ -164,3 +164,18 @@ a#tooCool {
 .fontred { color:#f00; }
 .fontgreen { color:#0f0 }
 .noborder { border-style:none; }
+
+
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+/*---------------------------FONTS---------------------------*/
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inconsolata'), url(fonts/BjAYBlHtW3CJxDcjzrnZCNIh4imgI8P11RFo6YPCPC0.woff) format('woff');
+}
+
