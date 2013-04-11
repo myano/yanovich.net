@@ -2,8 +2,6 @@
                 <iframe style="border: 0; margin: 0; padding: 0;" src="https://www.gittip.com/myano/widget.html" width="48" height="20"></iframe>
                 <a href="https://flattr.com/thing/801771/Michael-Yanovichs" target="_blank"><img src="images/flattr-badge-large.png" alt="Flattr this" title="Flattr this" style="border: 0;" /></a>
                 <br />
-                btc: 1HwQcZYcYYaSCV8XfPYHGVhfVWbQbEPp3h
-                <br />
                 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">
                 <img class="noborder" alt="Creative Commons License" src="images/88x31.png" /></a>
                 <br />
