@@ -6,8 +6,8 @@ $content = <<<EOT
 You can contact me using the following methods.
 <br /><br />
 <span class="fontbold"><em>Email:</em></span><br />
-<img src="images/namenum.jpg" /><br /><br />
 <img src="images/mynet.jpg" /><br /><br />
+<img src="images/namenum.jpg" /><br /><br />
 
 I use PGP when e-mailing. Please try to sign and encrypt your e-mails to me with my public key, which is located <a href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xA06940BDC20EAE1D">here</a>. All e-mails sent by me will be signed. If you receive an e-mail from me that is not signed assumed it has been tampered with and was not sent by me (ie: the origin of the e-mail has been spoofed or altered).
 <br /><br />
