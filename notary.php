@@ -71,7 +71,7 @@ VisNlAuuLM8CAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
 <br />
-Here are a few I found run by MIT.
+Here are a few I found run MIT/CMU. <a href="https://www.cs.cmu.edu/~perspectives/notary_list.txt">Source</a>
 <br />
 <pre>
 hostway.ron.lcs.mit.edu:8080
