@@ -45,7 +45,7 @@
             </div>
 
             <div id="content">
-                <!-- 
+                <!--
                     Content goes here!
                 -->
                 <?php
@@ -53,8 +53,8 @@
                 ?>
             </div>
 
-        </div> 
-            
+        </div>
+
         <div id="footer">
         <!--
             This is the footer.
