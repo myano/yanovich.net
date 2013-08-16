@@ -14,6 +14,10 @@ A few things I have created, contributed to and/or maintain:
     </li>
 
     <li>
+        a Firefox extension/addon, <a href="https://addons.mozilla.org/en-US/firefox/addon/gitio-creator/">git.io creator</a>
+    </li>
+
+    <li>
         <a href="https://github.com/myano/jenni/">jenni -- a python IRC bot</a>
     </li>
 
@@ -40,6 +44,12 @@ I mirror a <a href="/programming.php">guide to a new programming language</a> I 
 <br /><br />
 <span class="fontbold">Club Images</span><br />
 The Ohio State University Open Source Club <a href="open_source_images.tar.gz">pictures and images</a>.
+<ul>
+    <li><strong>md5sum</strong>: ae441581a4bfff80a64427de87ca6a68</li>
+    <li><strong>sha1sum</strong>: 545b06740829a0c9f67dac1af2e4f8b4dc5b305d</li>
+    <li><strong>sha25sum</strong>: 06c6813f17969e9644583461e8b5017176eef2e76c5123a528de11e923205051</li>
+    <li><strong>sha512sum</strong>: 9819595b967f6899a1d97c788a788d0a30539ba84209b0e0b6a56359d750b41ccf6cf8a13a76bd5d2fe641c5aa80138f74f2cbaa499036404e90f329214a2c04</li>
+</ul>
 <br /><br />
 I've grown tired of the long domain for accessing WolframAlpha, now this exists: <a href="http://wa.io/">WolframAlpha</a>.
 <br /><br />
@@ -47,4 +57,4 @@ The <a href="https://github.com/myano/yanovich.net">source code</a> of this webs
 EOT;
 
 include("template.php");
-?> 
+?>
