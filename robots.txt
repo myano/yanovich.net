@@ -7,6 +7,7 @@ User-agent: ia_archiver
 Disallow: /
 
 User-agent: *
+Disallow: /.
 Disallow: /.*
 Disallow: /.p
 Disallow: /.private
@@ -16,6 +17,6 @@ Disallow: /blog_src
 Disallow: /cgi-bin
 Disallow: /images
 Disallow: /logs
-Crawl-delay: 10
+Crawl-delay: 5
 
 Sitemap: https://yanovich.net/sitemap.xml
