@@ -7,7 +7,7 @@ $content = <<<EOT
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-</pre>
+</pre><br />
 You can contact me using the following methods.
 <br /><br />
 <span class="fontbold"><em>Email:</em></span><br />
@@ -27,29 +27,28 @@ My site, yanovich.net, is using an SSL certificate issued by Gandi SAS. If you c
 <br /><br />
 SSL Certificate Fingerprints:
 <ul>
-    <li><em>SHA-256:</em> 4E 09 C9 A1 2B 6F B2 62 10 DF 61 8F 9E 05 1A 55 F3 80 64 AB B6 EC 81 CD 18 8F 5E 02 FF FC AD C2</li>
-    <li><em>SHA-1: </em> 81 33 76 7C 4E 67 B6 05 6F 54 70 4D 70 FC 0E A4 78 8B 5A 8F</li>
-    <li><em>MD5: </em> FD 2D D9 B0 2A 31 83 C4 33 07 91 D1 99 1C 51 84</li>
+    <li><em>SHA-256:</em> 09 42 5C 2C 19 47 A9 C1 BC 1E 89 CF 74 B2 7B 73 29 23 75 10 5F EF FB D0 3C B7 F0 72 96 E0 A1 53</li>
+    <li><em>SHA-1: </em> 78 04 16 66 ED 59 FD B9 13 68 08 18 38 78 BC B5 54 A8 29 20</li>
+    <li><em>MD5: </em> CE D5 41 54 41 87 66 35 22 33 58 70 23 D7 D8 AB</li>
 </ul>
 <pre>
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQIcBAEBCgAGBQJSOEOvAAoJEKBpQL3CDq4d0xsQAJioNq0u+dP97P9IBnMCJqNh
-AMOf0fv/5RsYI6SiCwBGnFAlAFLVohzPPUO05ut0RCNtOEGYs3e8rKF2wScVQill
-WTs+te6UkllNWjJt2H64vea7ZKeajKNgbYAujZlZ+HWcLX+ngcZ7pSVtYJO0HdCL
-ealb7RY53MRQOh03EtJ0R5Oo3G1Tw2lfWI/LwuzXhagcWgkVNBBSdCDqafAyka19
-ghIecUmNVTww1JQj1TzGQhdRmOCmTsrIGPH9kHlq0zYp5nVuSHSBIIL9+eGLfeow
-qVxhMDMmr6X29TUiH8uwL94puBsTBt6LStsBVWVQ2DgFbFLZLRZBxLLDaZIsEQC4
-any1id2oSNQxjZcVc6ZcZTPazprbd43qBod39wd4yEcIMkYHvUtvNER85z76fhHR
-y6kECkKgpUO4WHy8bXm3Cl7Fe7N7obd+kyTflg8/uSZCttuld4/aewhbYcZ3hlzt
-M3B4xLzF9OG5cOiiuz02x6DAVtZWH5vhj17tnEwzeH3bxpg0oWorsmQaX9U18WTA
-1d1wd/6JTKb+MO2C3SHDjN8nx9fOREHecomVcXZ/dt9Qdh5xwl2lMM7VPNehffsy
-RgVaOts1Ux3X5UAa7rs8d1VA+ugezXvC0YO21q2d0gB4YS+5bcKnh1lXCLczoEd5
-fC7wTQKr4Ff4VOH+2vk8
-=UrrN
+iQIcBAEBCgAGBQJSbuUQAAoJEKBpQL3CDq4dLxkQAKcaW1pPbP/2X/M6oSRp2g2m
+ZiHhidpZRJLiJu42eE+hnyraX7014fEfJv8uvloN+7JfhtJuFNqZnTWGoInvohxG
+ufvEMNdyMT2o8CEeyt6+LEEZ1kkTqufpDn8KGvn5pPnTzOHqqxqeMhWztaNgIkYq
+DhA1YafpwlPUvzgGABXkKBFvmnYHEAKCSlpp48pbsmFdPMRnwrKcL6jaoJ+QnF6/
+qGX/72Yc5uDDNulEyMv5+y55FAdx4KYIOSiMXRslEIxhwM22YrY43KZ4yXb5PSJy
+rnFqbGoEzkUyweLc8oDePd0VX+lwuLpSfWsllskm3zXobAFwYVcFN/Vy7/t+tRa8
+c4Aof4D5BDP5Uf7LJuxo7XAchZgRtPgHSff6tSyZA0WBP23wQO7DmN3Eoo/iYYBN
+/04qFlmUllTEMQItFchPyyqUQ9V1M0qN+lzJRihXxJcX2axqh5EeQR6LP9ni4jv5
+581uJKIfMd1xy/0ebESrj8MVceZO8H1/r5IHEkeJlxgKGD9fFIcghKqP4VJFtpPJ
+s/mz+CN6ovN14Tg1tOP1eiwaHaz6TZf8JTYyCeRcu0hDrKUSVo/iAKQrdMdHoGSz
+ITmlRqNhAYdF7jc92h2UDFzkrmCPuFi1yxsAFunodg+h6lzPy2riGtpca86m57Wj
++UkdbeUyDs9EuG51HlfY
+=16h7
 -----END PGP SIGNATURE-----
-</pre>
 EOT;
 
 include("template.php");
