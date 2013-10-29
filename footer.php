@@ -1,5 +1,5 @@
 <div class="textalign-center">
-                <script data-gittip-username="myano" data-gittip-widget="button" src="https://gttp.co/v1.js"></script>
+                <iframe style="border: 0; margin: 0; padding: 0;" src="https://www.gittip.com/myano/widget.html" width="48" height="20"></iframe>
                 <a href="https://flattr.com/thing/801771/Michael-Yanovichs" target="_blank"><img src="images/flattr-badge-large.png" alt="Flattr this" title="Flattr this" style="border: 0;" /></a>
                 <br />
                 <a href="https://coinbase.com/checkouts/beb93bfa56c3e638e19430e1f7392554" target="_blank"><span style="font-size:16px; color:#fff;">Donate Bitcoins</span></a>
