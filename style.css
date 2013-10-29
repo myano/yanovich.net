@@ -176,6 +176,6 @@ a#tooCool {
     font-family: 'Inconsolata';
     font-style: normal;
     font-weight: 400;
-    src: local('Inconsolata'), url(fonts/BjAYBlHtW3CJxDcjzrnZCNIh4imgI8P11RFo6YPCPC0.woff) format('woff');
+    src: local('Inconsolata'), url("fonts/BjAYBlHtW3CJxDcjzrnZCNIh4imgI8P11RFo6YPCPC0.woff") format('woff');
 }
 
