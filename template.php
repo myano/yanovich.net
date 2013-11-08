@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="/style.css" rel="stylesheet" type="text/css" />
 
         <meta name="ROBOTS" content="NOARCHIVE"/>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -15,8 +15,10 @@
         <?php
             if ($_SERVER['HTTPS'])
             {
-                include("ssl.php");
+                include("/ssl.php");
             }
+
+            $base_path = "/var/www/yanovich.net/public/";
         ?>
 
         <!-- <a id="tooCool" href="http://www.w3junkies.com/toocool/">Too Cool for Internet Explorer</a> -->
@@ -24,7 +26,7 @@
             <!--
                 This contains the sweet "logo."
             -->
-            <?php include("header.php"); ?>
+            <?php include($base_path . "header.php"); ?>
         </div>
 
         <div id="bgimg">
@@ -40,7 +42,7 @@
                     Navigation goes here!
                 -->
                 <?php
-                    include("navigation.php");
+                    include($base_path . "navigation.php");
                 ?>
             </div>
 
@@ -60,7 +62,7 @@
             This is the footer.
         -->
             <?php
-                include ("footer.php");
+                include ($base_path . "footer.php");
             ?>
         </div>
         <script type="text/javascript">
