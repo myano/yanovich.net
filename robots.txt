@@ -31,10 +31,12 @@ Disallow: /.p
 Disallow: /.private
 Disallow: /.pub
 Disallow: /.public
+Disallow: /admin
 Disallow: /blog_src
 Disallow: /cgi-bin
 Disallow: /images
 Disallow: /logs
+Disallow: /pk
 Crawl-delay: 5
 
 Sitemap: https://yanovich.net/sitemap.xml
