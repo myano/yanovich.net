@@ -5,11 +5,14 @@ $meta = "notary, perspectives server, perspectives servers";
 $content = <<<EOT
 I run a <a href="http://perspectives-project.org/notary-servers/">Perspectives Notary Server</a>. It is free for anyone to use.
 <br /><br />
-<a href="http://perspectives-project.org/">What is Perspectives?</a> -- Perspectives is a browser extension that verifies if other servers on the Internet are seeing the same SSL certificate you are being presented with when visiting a site using HTTPS.
+<a href="http://perspectives-project.org/">What is Perspectives?</a> -- Perspectives is a browser extension that verifies if other servers on the Internet are seeing t
+he same SSL certificate you are being presented with when visiting a site using HTTPS.
 <br /><br />
-Extensions available: <a href="https://addons.mozilla.org/en-US/firefox/addon/perspectives/">Perspectives (Firefox)</a> and <a href="https://chrome.google.com/webstore/detail/lnppfgdnjafeikakadfopejdpglpiahn">Perspectives (Chrome)</a>
+Extensions available: <a href="https://addons.mozilla.org/en-US/firefox/addon/perspectives/">Perspectives (Firefox)</a> and <a href="https://chrome.google.com/webstore
+/detail/lnppfgdnjafeikakadfopejdpglpiahn">Perspectives (Chrome)</a>
 <br /><br />
-To add these to your configuration in Firefox, left click on the blue "P" and click "Preferences". Then click "Notary Servers" in the tab section, then copy and paste the lines from below into the "Additional Notary Servers" box and when done click "OK".
+To add these to your configuration in Firefox, left click on the blue "P" and click "Preferences". Then click "Notary Servers" in the tab section, then copy and paste 
+the lines from below into the "Additional Notary Servers" box and when done click "OK".
 <br /><br />
 You can use it by adding this to your configuration:
 <pre>
@@ -47,7 +50,8 @@ ph9l7ldMu8XGuwmFoHBgEys633EPcrJcs46lfvNz5JRrYnjh0WMkj0VXvVlYla2g
 pXk2xzJ2tq8CAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
-This notary server is a bit interesting as it supposedly stores the entire CA chain instead of just the certificate. <a href="https://constructibleuniverse.net/">Source</a>
+This notary server is a bit interesting as it supposedly stores the entire CA chain instead of just the certificate. <a href="https://constructibleuniverse.net/">Sourc
+e</a>
 <pre>
 notary1.constructibleuniverse.net:8080
 -----BEGIN PUBLIC KEY-----
@@ -71,18 +75,8 @@ VisNlAuuLM8CAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
 <br />
-Here are a few I found run MIT/CMU. <a href="https://www.cs.cmu.edu/~perspectives/notary_list.txt">Source</a>
+Here is one that still works from CMU/MIT. <a href="https://www.cs.cmu.edu/~perspectives/notary_list.txt">Source</a>
 <br />
-<pre>
-hostway.ron.lcs.mit.edu:8080
------BEGIN PUBLIC KEY-----
-MIHKMA0GCSqGSIb3DQEBAQUAA4G4ADCBtAKBrAFiENC/BwZXOfzDOed4Qbvjd/25
-MixlCMlRUlfArJAvcjeBRmnY4fdQhi7/VH1qZeTQClegX1FMcuOORD29a4lks12W
-iXrh1HxLKxCTkPp5ZLqP8OiNxWqHdEQyinh2ulYFXZHWMlXhlsQKV2T7VsmfS0rL
-eukQAWpgGTXhACyZNpOQgjMm1vWEFaIsd2tT59Son7vxyCcaBoFCWv+zRW6kwaoK
-i0KgnEHwKwcCAwEAAQ==
------END PUBLIC KEY-----
-</pre>
 <pre>
 mvn.ron.lcs.mit.edu:8080
 -----BEGIN PUBLIC KEY-----
@@ -94,7 +88,8 @@ e+c3aFR35Y8CAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
 <br />
-I don't know much about this one, but it seems to have a good amount of history. <a href="https://georgi.softver.org.mk/blog/2011/08/perspectives-project-https-%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B5%D0%BD%D0%BE-%D0%B8-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BE/">Source</a>
+I don't know much about this one, but it seems to have a good amount of history. <a href="https://georgi.softver.org.mk/blog/2011/08/perspectives-project-https-%D0%BF%
+D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B5%D0%BD%D0%BE-%D0%B8-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BE/">Source</a>
 <pre>
 glisha.webfactional.com/perspectivesnotary
 -----BEGIN PUBLIC KEY-----
@@ -105,7 +100,8 @@ XKgsrK+EQUfRunS1NzlZtl657noMM/MirWkfpc3iYnqX+7bkEDO5cm8PsA27BUMS
 nujfPWDgVHUCAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
-These two haven't responded in a while.
+<br /><br /><br /><br />
+These ones haven't responded in a while. (They don't work)
 <pre>
 cmu.ron.lcs.mit.edu:8080
 -----BEGIN PUBLIC KEY-----
@@ -124,6 +120,16 @@ CZSFocs5ZKVamm6O7ywtFCuPgxxYTr3GyrDKj2IBO05iXirOISyX0OtENvs829Xj
 TbKqDgeN1ttDiJmszN939RvBdmzkmXi2zaOXPX3ral56hJOWjOs6NokeBo26ZHux
 5k9g3AqFer5LNyDVgGrG5q7+INGodDSTYm2W5nvmi55U/pe7MmJCH7EEY1ObGPr1
 7XqZeEbL4ikCAwEAAQ==
+-----END PUBLIC KEY-----
+</pre>
+<pre>
+hostway.ron.lcs.mit.edu:8080
+-----BEGIN PUBLIC KEY-----
+MIHKMA0GCSqGSIb3DQEBAQUAA4G4ADCBtAKBrAFiENC/BwZXOfzDOed4Qbvjd/25
+MixlCMlRUlfArJAvcjeBRmnY4fdQhi7/VH1qZeTQClegX1FMcuOORD29a4lks12W
+iXrh1HxLKxCTkPp5ZLqP8OiNxWqHdEQyinh2ulYFXZHWMlXhlsQKV2T7VsmfS0rL
+eukQAWpgGTXhACyZNpOQgjMm1vWEFaIsd2tT59Son7vxyCcaBoFCWv+zRW6kwaoK
+i0KgnEHwKwcCAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
 <br />

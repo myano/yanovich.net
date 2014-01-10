@@ -37,6 +37,11 @@ Disallow: /cgi-bin
 Disallow: /images
 Disallow: /logs
 Disallow: /pk
+Disallow: /q
+Disallow: /umb
+Disallow: /t
+Disallow: /vvz
+Disallow: /z
 Crawl-delay: 5
 
 Sitemap: https://yanovich.net/sitemap.xml
