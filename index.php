@@ -6,7 +6,7 @@ $content = <<<EOT
 A few things I have created, contributed to and/or maintain:
 <ul>
     <li>
-        <a href="https://lmddgtfy.net">Let Me DuckDuckGo That For You</a>
+        <a href="https://lmddgtfy.net/">Let Me DuckDuckGo That For You</a>
     </li>
 
     <li>
@@ -26,7 +26,7 @@ A few things I have created, contributed to and/or maintain:
     </li>
 
     <li>
-        <a href="http://yano.nu/ip/">IP Address displayer</a> similar to <a href="http://icanhazip.com">icanhazip.com</a>.
+        <a href="http://yano.nu/ip/">IP Address displayer</a> similar to <a href="https://icanhazip.com">icanhazip.com</a>.
     </li>
 
     <li>
