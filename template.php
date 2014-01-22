@@ -67,16 +67,31 @@
         </div>
         <script type="text/javascript">
           var _paq = _paq || [];
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
+          _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+          _paq.push(["trackPageView"]);
+          _paq.push(["enableLinkTracking"]);
+
           (function() {
             var u=(("https:" == document.location.protocol) ? "https" : "http") + "://yanovich.net/pk/";
-            _paq.push(['setTrackerUrl', u+'pk.php']);
-            _paq.push(['setSiteId', 1]);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-            g.defer=true; g.async=true; g.src=u+'pk.js'; s.parentNode.insertBefore(g,s);
+            _paq.push(["setTrackerUrl", u+"pk.php"]);
+            _paq.push(["setSiteId", "1"]);
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+            g.defer=true; g.async=true; g.src=u+"pk.js"; s.parentNode.insertBefore(g,s);
           })();
-
         </script>
     </body>
+<?php
+    function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, strlen($characters) - 1)];
+        }
+        return $randomString;
+    }
+
+    $rand = rand(50, 2500);
+    $text = generateRandomString($rand);
+    echo "<!-- $text -->\n";
+?>
 </html>

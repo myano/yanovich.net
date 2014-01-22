@@ -34,14 +34,18 @@ Disallow: /.public
 Disallow: /admin
 Disallow: /blog_src
 Disallow: /cgi-bin
+Disallow: /drupal
 Disallow: /images
+Disallow: /ip
+Disallow: /joomla
 Disallow: /logs
 Disallow: /pk
 Disallow: /q
 Disallow: /umb
 Disallow: /t
 Disallow: /vvz
+Disallow: /wordpress
+Disallow: /wp
 Disallow: /z
-Crawl-delay: 5
 
 Sitemap: https://yanovich.net/sitemap.xml
