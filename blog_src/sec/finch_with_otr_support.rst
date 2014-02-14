@@ -29,14 +29,14 @@ Here are the versions of relevant software packages that I used.
 
 First thing I would recommend would be to remove any installation of pidgin that you currently have:
 
-.. code-block:: TextLexer
+.. code-block:: BashLexer
 
     $ sudo aptitude remove pidgin
 
 Then I would recommend installing the following packages:
 
-.. code-block:: TextLexer
-    
+.. code-block:: BashLexer
+
     $ sudo aptitude install intltool glibc-2.11-1 glibc glibc-2 glibc-2.11-1 libglib2.0-dev libxml2-dev libidn11-dev libmeanwhile-dev gnutls-bin gnutls-dev tk tk-dev libgtk2.0-dev libgtkspell-dev git
 
 I came up with this list after re-running the ``./configure``'s for the above packages since I compiled many of them from source.
@@ -45,7 +45,7 @@ To keep files organized I downloaded everything to ``/opt/pidgin/`` and then ext
 
 After installing all those packages from the repository, I then did the following:
 
-.. code-block:: TextLexer
+.. code-block:: BashLexer
 
     $ wget ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.5.0.tar.gz
     $ wget ftp://ftp.gnupg.org/gcrypt/libgpg-error/libgpg-error-1.9.tar.gz
@@ -129,7 +129,7 @@ One thing I did run into on the Ubuntu machine was this:
      make: *** [Makefile.in] Error 1
 
 If you get that error message, run: ``aclocal`` and then ``autoconf``, then start over with ``./configure`` and proceed with ``make``, and then ``sudo make install``.
-    
+
 The main reason I disabled these options is because I'm running finch inside tmux on the server. Also I don't believe many of these features that I disabled would work through ssh and tmux, as I ssh into a different box and then pull up tmux to see finch.
 
 If you really want support for these things I have disabled and you don't have the packages installed, the output of ``./configure`` will tell you what to install. Though you'll need to search your repository for your distribution specific package to install the package. I ran into a few things like not having the development libraries for perl. It seemed to work fine with the version of perl's development libraries in Debian's repository.
