@@ -11,12 +11,11 @@ he same SSL certificate you are being presented with when visiting a site using 
 Extensions available: <a href="https://addons.mozilla.org/en-US/firefox/addon/perspectives/">Perspectives (Firefox)</a> and <a href="https://chrome.google.com/webstore
 /detail/lnppfgdnjafeikakadfopejdpglpiahn">Perspectives (Chrome)</a>
 <br /><br />
-To add these to your configuration in Firefox, left click on the blue "P" and click "Preferences". Then click "Notary Servers" in the tab section, then copy and paste 
-the lines from below into the "Additional Notary Servers" box and when done click "OK".
+To add these to your configuration in Firefox, left click on the blue "P" and click "Preferences". Then click "Notary Servers" in the tab section, then copy and paste the lines from below into the "Additional Notary Servers" box and when done click "OK".
 <br /><br />
 You can use it by adding this to your configuration:
 <pre>
-78.46.220.130:8080
+de.yano.nu:8080
 -----BEGIN PUBLIC KEY-----
 MIHKMA0GCSqGSIb3DQEBAQUAA4G4ADCBtAKBrAHH17C/zqdzBW3y8Rov0UVFkme6
 Idfd1O7wXckTdbd+bu7rClAFMbGijMlxYmNeavhJfyYmYct89dNlIyrnK9fa5PeL
@@ -75,6 +74,17 @@ VisNlAuuLM8CAwEAAQ==
 -----END PUBLIC KEY-----
 </pre>
 <br />
+This server is operated by Nicolás Reynolds.
+<pre>
+-----BEGIN PUBLIC KEY-----
+MIHKMA0GCSqGSIb3DQEBAQUAA4G4ADCBtAKBrAG2NH8WCyg4mnYTQ9M3Aef5cHR7
+IE/8ADHzdnQcMteZtdeecpIwAhOoP64RdSs5T09GIDG2eD7Fd9MABe+tLGO/VMUp
+bb4FSKkjhn6U5CX8kYXlytTmHUc9LGcUCJKUY0ghO4cpW1mFli3p+ve96SKrxtze
+un5TLQT3qJB5tdnSzdrNTi9PSeIzfKmGmdegknUgblohQktzGi6Wc8MCXwuGccl9
+lb7Qr7nFSWMCAwEAAQ==
+-----END PUBLIC KEY-----
+</pre>
+<br/>
 Here is one that still works from CMU/MIT. <a href="https://www.cs.cmu.edu/~perspectives/notary_list.txt">Source</a>
 <br />
 <pre>
