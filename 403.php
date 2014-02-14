@@ -3,6 +3,7 @@ $page_title = "Michael Yanovich :: 403";
 $meta = "403";
 
 $content = <<<EOT
+<h1>403</h1>
 <br />
 Hey, sorry about that!
 
